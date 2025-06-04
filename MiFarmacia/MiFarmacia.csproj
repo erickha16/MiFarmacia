@@ -99,8 +99,37 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="assets\audios\latidos.mp3" />
+    <Content Include="assets\audios\lluvia.mp3" />
+    <Content Include="assets\audios\nature.mp3" />
+    <Content Include="assets\audios\olas.mp3" />
+    <Content Include="assets\audios\ruidoBlanco.mp3" />
+    <Content Include="assets\images\anuncios\ahorra.jpg" />
+    <Content Include="assets\images\anuncios\consultas.jpg" />
+    <Content Include="assets\images\anuncios\hotsale.jpg" />
+    <Content Include="assets\images\anuncios\Probiotico.jpg" />
+    <Content Include="assets\images\anuncios\tutoriales.jpg" />
+    <Content Include="assets\images\anuncios\vitaminate.jpg" />
+    <Content Include="assets\images\carrusel\carrusel1.jpg" />
+    <Content Include="assets\images\carrusel\carrusel2.png" />
+    <Content Include="assets\images\carrusel\carrusel3.jpg" />
+    <Content Include="assets\images\logo.jpg" />
+    <Content Include="assets\images\logoIA.png" />
+    <Content Include="assets\images\payment-methods.png" />
+    <Content Include="assets\images\productos\producto1.jpg" />
+    <Content Include="assets\images\productos\producto10.jpg" />
+    <Content Include="assets\images\productos\producto11.jpg" />
+    <Content Include="assets\images\productos\producto12.jpg" />
+    <Content Include="assets\images\productos\producto2.jpg" />
+    <Content Include="assets\images\productos\producto3.jpg" />
+    <Content Include="assets\images\productos\producto4.jpg" />
+    <Content Include="assets\images\productos\producto5.jpg" />
+    <Content Include="assets\images\productos\producto6.jpg" />
+    <Content Include="assets\images\productos\producto7.jpg" />
+    <Content Include="assets\images\productos\producto8.jpg" />
+    <Content Include="assets\images\productos\producto9.jpg" />
+    <Content Include="assets\videos\invierno.mp4" />
+    <Content Include="assets\videos\teCuida.mp4" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -118,9 +147,30 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
-    <Content Include="favicon.ico" />
+    <Content Include="Content\sweetalert.css" />
+    <Content Include="css\Admin\indexAdmin.css" />
+    <Content Include="css\Admin\login.css" />
+    <Content Include="css\cart.css" />
+    <Content Include="css\Locations.css" />
+    <Content Include="css\Sports&amp;Health.css" />
+    <Content Include="css\StylesMain.css" />
+    <Content Include="css\sweetalert.css" />
     <Content Include="Global.asax" />
+    <Content Include="js\Admin\adminMaster.js" />
+    <Content Include="js\Admin\login.js" />
+    <Content Include="js\cart.js" />
+    <Content Include="js\locations.js" />
+    <Content Include="js\parents.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\sports.js" />
+    <Content Include="pages\Admin\IndexAdmin.aspx" />
+    <Content Include="pages\Admin\Login.aspx" />
+    <Content Include="pages\Cart.aspx" />
+    <Content Include="pages\Citas.aspx" />
+    <Content Include="pages\index.aspx" />
+    <Content Include="pages\Locations.aspx" />
+    <Content Include="pages\Parents.aspx" />
+    <Content Include="pages\Sports_Health.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -149,12 +199,14 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Admin.Master" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\sweetalert.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -183,31 +235,73 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\IndexAdmin.aspx.cs">
+      <DependentUpon>IndexAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\IndexAdmin.aspx.designer.cs">
+      <DependentUpon>IndexAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Citas.aspx.cs">
+      <DependentUpon>Citas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Citas.aspx.designer.cs">
+      <DependentUpon>Citas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Locations.aspx.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Locations.aspx.designer.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Parents.aspx.cs">
+      <DependentUpon>Parents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Parents.aspx.designer.cs">
+      <DependentUpon>Parents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Sports_Health.aspx.cs">
+      <DependentUpon>Sports_Health.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Sports_Health.aspx.designer.cs">
+      <DependentUpon>Sports_Health.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -219,12 +313,16 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Util\Enumeradores.cs" />
+    <Compile Include="Util\UtilControls.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -232,6 +330,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="assets\icons\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

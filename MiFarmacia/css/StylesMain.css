@@ -1,0 +1,119 @@
+﻿:root {
+    --primary-color: #4D90FE;
+    --primary-dark: #3360AA;
+    --primary-light: #478BCA;
+    --background-color: #f8f8f8;
+    --background-logo: #FCFBFA;
+    --text-color: #32323A;
+    --text-light: #6c757d;
+    --white-color: #fff;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-logo);
+    color: var(--text-color);
+    padding-top: 0; 
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+/* Header */
+
+#top{
+    background-color: var(--background-logo);
+}
+
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+    padding: 0.8rem 1.2rem;
+    position: relative;
+}
+
+    .navbar-nav .nav-link.active {
+        font-weight: 600;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+
+    .navbar-nav .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 8px; /* Ajusta según tu preferencia */
+        left: 1.2rem;
+        right: 1.2rem;
+        height: 2px;
+        background-color: var(--white-color);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+.navbar-nav .nav-item.active .nav-link::after {
+    transform: scaleX(1);
+}
+
+/* Main */
+main {
+    margin: 0px 50px
+}
+
+
+/* Efecto hover para controles */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: var(--primary-dark) !important;
+}
+
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    #pharmaCarousel {
+        border-radius: 0 !important;
+    }
+
+    .carousel-item img {
+        max-height: 300px !important;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+/* Footer */
+footer a:hover {
+    color: var(--gold-color) !important;
+}
+
+/* Efectos hover */
+.btn-hover-grow {
+    transition: transform 0.3s ease;
+}
+
+    .btn-hover-grow:hover {
+        transform: translateY(-3px);
+    }
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Más espacio para el navbar en móvil */
+    }
+
+    .navbar-collapse {
+        padding: 1rem 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+}

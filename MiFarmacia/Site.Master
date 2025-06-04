@@ -2,69 +2,138 @@
 
 <!DOCTYPE html>
 
-<html lang="es">
+<html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+    <title>Tu farmacia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="css/StylesMain.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 
     <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
+    <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="/Content/sweetalert.css" rel="stylesheet" />
+    <script src="/Scripts/sweetalert.min.js"></script>
 
 </head>
 <body>
-    <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-            </Scripts>
-        </asp:ScriptManager>
-
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>
-                    </ul>
+    <!-- Header -->
+    <header class="shadow-sm sticky-top ">
+        <div id="top" class="container">
+            <div class="row align-items-center">
+                <!-- Logo -->
+                <div class="col-md-3 text-center text-md-start">
+                    <a href="/pages/index.aspx" class="logo text-decoration-none">
+                        <img src="/assets/images/logoIA.png" alt="Logo de la Farmacia online" class="img-fluid" style="max-height: 80px;">
+                    </a>
+                </div>
+                
+                <!-- Eslogan -->
+                <div class="col-md-6 text-center my-3 my-md-0">
+                    <h2 class="m-0 text-primary fw-bold fs-3 text fade-in">Cuidamos de ti, cuidamos de tu salud</h2>
+                </div>
+                
+                <!-- Iconos -->
+                <div class="col-md-3 text-center text-md-end">
+                    <div class="d-flex justify-content-center justify-content-md-end gap-4">
+                        <a href="/pages/Locations.aspx" class="text-decoration-none text-dark">
+                            <i class="fa-solid fa-location-dot fs-5"></i>
+                            <span class="d-none d-md-inline ms-1">Sucursales</span>
+                        </a>
+                        <a href="/pages/Cart.aspx" class="text-decoration-none text-dark position-relative">
+                            <i class="fa-solid fa-cart-shopping fs-5"></i>
+                            <span class="d-none d-md-inline ms-1">Carrito</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </nav>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-            </footer>
         </div>
-    </form>
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/Scripts/bootstrap.js") %>
-    </asp:PlaceHolder>
+        
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+            <div class="container justify-content-center">
+                    <ul class="navbar-nav  mx-0 gap-5">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="index" href="/pages/index.aspx">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="sports" href="/pages/Sports_Health.aspx">Nutrición y deporte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="parents" href="/pages/Parents.aspx">Mamás y Papás</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="us" href="#">Sobre nosotros</a>
+                        </li>
+                    </ul>   
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="py-2">
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        </asp:ContentPlaceHolder>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-4 pb-2">
+        <div class="container">
+            <div class="row">
+                <!-- Enlaces -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="/pages/Cart.aspx" class="text-white text-decoration-none">Mi carrito</a></li>
+                        <li class="mb-2"><a href="/pages/Citas.aspx" class="text-white text-decoration-none">Citas</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Redes sociales -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold mb-3">Síguenos</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white fs-4" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white fs-4" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-4" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contacto -->
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Contacto</h5>
+                    <address>
+                        <p class="mb-1">Blvd. Europa #315</p>
+                        <p class="mb-1">Col. Indeco Ánimas, Xalapa, Ver.</p>
+                        <p class="mb-0">Tel: 228 835 2622</p>
+                    </address>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-white">
+            
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Tu Farmacia online. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
