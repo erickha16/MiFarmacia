@@ -10,23 +10,23 @@ namespace VO
     public class AdminsVO
     {
         // Atributos + Propiedades
-        public int AdminID { get; set; }
-        public string UserName { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public string Password { get; set; }
 
         // ------------------------ Constructores ------------------------
 
         public AdminsVO(DataRow dr)
         {
-            AdminID = int.Parse(dr["AdminID"].ToString());
-            UserName = dr["UserName"].ToString();
+            Id = int.Parse(dr["AdminID"].ToString());
+            Name = dr["UserName"].ToString();
             Password = dr["Password"].ToString();
         }
 
         public AdminsVO()
         {
-            AdminID = 0;
-            UserName = string.Empty;
+            Id = 0;
+            Name = string.Empty;
             Password = string.Empty;
         }
     }

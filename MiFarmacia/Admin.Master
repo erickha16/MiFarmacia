@@ -33,9 +33,9 @@
             </div>
              <ul class="sidebar-nav">
                   <li class="sidebar-item">
-                      <a href="#" class="sidebar-link">
+                      <a href="/pages/Admin/Admins/InfoAdmin.aspx" class="sidebar-link">
                           <i class="fa-solid fa-circle-user"></i>
-                          <span>Administradoress</span>
+                          <span>Administradores</span>
                       </a>
                   </li>
                  <li class="sidebar-item">
@@ -70,7 +70,7 @@
                  </li>
              </ul>
              <div class="sidebar-footer">
-                 <a href="#">
+                 <a href="/pages/index.aspx">
                      <i class="fa-solid fa-right-from-bracket"></i>
                      <span>Salir</span>
                  </a>

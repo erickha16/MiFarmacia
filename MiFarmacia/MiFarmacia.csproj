@@ -163,8 +163,9 @@
     <Content Include="js\parents.js" />
     <Content Include="js\script.js" />
     <Content Include="js\sports.js" />
+    <Content Include="pages\Admin\Admins\AltaAdmins.aspx" />
+    <Content Include="pages\Admin\Admins\InfoAdmin.aspx" />
     <Content Include="pages\Admin\Categorias\AltaCategorias.aspx" />
-    <Content Include="pages\Admin\IndexAdmin.aspx" />
     <Content Include="pages\Admin\Categorias\ListarCategorias.aspx" />
     <Content Include="pages\Admin\Login.aspx" />
     <Content Include="pages\Admin\Productos\AltaProducto.aspx" />
@@ -252,19 +253,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="pages\Admin\Admins\AltaAdmins.aspx.cs">
+      <DependentUpon>AltaAdmins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Admins\AltaAdmins.aspx.designer.cs">
+      <DependentUpon>AltaAdmins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Admins\InfoAdmin.aspx.cs">
+      <DependentUpon>InfoAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Admins\InfoAdmin.aspx.designer.cs">
+      <DependentUpon>InfoAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\Admin\Categorias\AltaCategorias.aspx.cs">
       <DependentUpon>AltaCategorias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\Admin\Categorias\AltaCategorias.aspx.designer.cs">
       <DependentUpon>AltaCategorias.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="pages\Admin\IndexAdmin.aspx.cs">
-      <DependentUpon>IndexAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pages\Admin\IndexAdmin.aspx.designer.cs">
-      <DependentUpon>IndexAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Admin\Categorias\ListarCategorias.aspx.cs">
       <DependentUpon>ListarCategorias.aspx</DependentUpon>
@@ -371,6 +379,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\icons\" />
+    <Folder Include="pages\Admin\Sucursales\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
