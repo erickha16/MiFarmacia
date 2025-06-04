@@ -15,7 +15,7 @@ body {
 
 h3 {
     font-size: 1.2375rem;
-    color: #FFF;
+    color: rgba(255, 255, 255, .075);
 }
 
 a {

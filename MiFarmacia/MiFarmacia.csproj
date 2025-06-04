@@ -163,7 +163,9 @@
     <Content Include="js\parents.js" />
     <Content Include="js\script.js" />
     <Content Include="js\sports.js" />
+    <Content Include="pages\Admin\Categorias\AltaCategorias.aspx" />
     <Content Include="pages\Admin\IndexAdmin.aspx" />
+    <Content Include="pages\Admin\Categorias\ListarCategorias.aspx" />
     <Content Include="pages\Admin\Login.aspx" />
     <Content Include="pages\Cart.aspx" />
     <Content Include="pages\Citas.aspx" />
@@ -247,12 +249,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="pages\Admin\Categorias\AltaCategorias.aspx.cs">
+      <DependentUpon>AltaCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Categorias\AltaCategorias.aspx.designer.cs">
+      <DependentUpon>AltaCategorias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\Admin\IndexAdmin.aspx.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\Admin\IndexAdmin.aspx.designer.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Categorias\ListarCategorias.aspx.cs">
+      <DependentUpon>ListarCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Categorias\ListarCategorias.aspx.designer.cs">
+      <DependentUpon>ListarCategorias.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Admin\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -344,9 +360,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
-      <Project>{b3d7a402-e2eb-4a2e-aee6-27d83412a389}</Project>
-      <Name>CapaDatos</Name>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{b49c5234-f300-4bea-8784-c6ae712c1fe9}</Project>
+      <Name>CapaNegocio</Name>
     </ProjectReference>
     <ProjectReference Include="..\VO\VO.csproj">
       <Project>{8f7397ca-6eca-4217-826a-551f316d26a0}</Project>
