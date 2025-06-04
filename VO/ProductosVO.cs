@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VO
 {
-    internal class ProductosVO
+    public class ProductosVO
     {
         //Atributos + Propiedades(Setters y Getters)
         public int Id { get; set; }

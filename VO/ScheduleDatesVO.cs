@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VO
 {
-    internal class ScheduleDatesVO
+    public class ScheduleDatesVO
     {
         // Atributos + Propiedades
         public int ScheduleDateID { get; set; }

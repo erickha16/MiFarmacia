@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VO
 {
-    internal class AddressesVO
+    public class AddressesVO
     {
         public int Id { get; set; }
         public string Street { get; set; }

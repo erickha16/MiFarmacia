@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VO
 {
-    internal class OrderDetailsVO
+    public class OrderDetailsVO
     {
         // Atributos + Propiedades
         public int OrderDetailID { get; set; }

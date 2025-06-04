@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VO
 {
-    internal class AdminsVO
+    public class AdminsVO
     {
         // Atributos + Propiedades
         public int AdminID { get; set; }

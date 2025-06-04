@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VO
 {
-    internal class OrdersVO
+    public class OrdersVO
     {
         public int Id { get; set; }
         public int CustomerId { get; set; }
