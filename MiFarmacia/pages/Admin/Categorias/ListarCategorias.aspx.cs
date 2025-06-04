@@ -28,8 +28,7 @@ namespace MiFarmacia.pages.Admin
 
         public void RefrescarGrid()
         {
-            //Llenar el GVChoferes con la lista de ChoferesVo
-            //GVCategorias.DataSource = BllChoferes.GetListChoferes(null);
+            //Llenar el GV con la lista del BLL
             GVCategorias.DataSource = BllCategories.GetListCategories();
 
             //Actualiza el contenido del grid

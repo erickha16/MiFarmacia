@@ -39,7 +39,7 @@
                       </a>
                   </li>
                  <li class="sidebar-item">
-                     <a href="#" class="sidebar-link">
+                     <a href="/pages/Admin/Productos/ListarProductos.aspx" class="sidebar-link">
                          <i class="fa-solid fa-box"></i>
                          <span>Productos</span>
                      </a>

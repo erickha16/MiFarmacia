@@ -167,6 +167,9 @@
     <Content Include="pages\Admin\IndexAdmin.aspx" />
     <Content Include="pages\Admin\Categorias\ListarCategorias.aspx" />
     <Content Include="pages\Admin\Login.aspx" />
+    <Content Include="pages\Admin\Productos\AltaProducto.aspx" />
+    <Content Include="pages\Admin\Productos\EditarProducto.aspx" />
+    <Content Include="pages\Admin\Productos\ListarProductos.aspx" />
     <Content Include="pages\Cart.aspx" />
     <Content Include="pages\Citas.aspx" />
     <Content Include="pages\index.aspx" />
@@ -276,6 +279,27 @@
     </Compile>
     <Compile Include="pages\Admin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Productos\AltaProducto.aspx.cs">
+      <DependentUpon>AltaProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Productos\AltaProducto.aspx.designer.cs">
+      <DependentUpon>AltaProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Productos\EditarProducto.aspx.cs">
+      <DependentUpon>EditarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Productos\EditarProducto.aspx.designer.cs">
+      <DependentUpon>EditarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Productos\ListarProductos.aspx.cs">
+      <DependentUpon>ListarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Productos\ListarProductos.aspx.designer.cs">
+      <DependentUpon>ListarProductos.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
