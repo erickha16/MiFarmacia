@@ -44,8 +44,11 @@
     <Compile Include="BllAddresses.cs" />
     <Compile Include="BllAdmin.cs" />
     <Compile Include="BllCategorias.cs" />
+    <Compile Include="BllDatesTypes.cs" />
     <Compile Include="BllLocations.cs" />
+    <Compile Include="BllOrdersSummary.cs" />
     <Compile Include="BllProductos.cs" />
+    <Compile Include="BllScheduleDates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

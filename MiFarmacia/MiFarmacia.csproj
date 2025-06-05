@@ -167,7 +167,11 @@
     <Content Include="pages\Admin\Admins\InfoAdmin.aspx" />
     <Content Include="pages\Admin\Categorias\AltaCategorias.aspx" />
     <Content Include="pages\Admin\Categorias\ListarCategorias.aspx" />
+    <Content Include="pages\Admin\Citas\AltaCita.aspx" />
+    <Content Include="pages\Admin\Citas\EditarCita.aspx" />
+    <Content Include="pages\Admin\Citas\ListarCitas.aspx" />
     <Content Include="pages\Admin\Login.aspx" />
+    <Content Include="pages\Admin\Ordenes\ListarResumenOrdenes.aspx" />
     <Content Include="pages\Admin\Productos\AltaProducto.aspx" />
     <Content Include="pages\Admin\Productos\EditarProducto.aspx" />
     <Content Include="pages\Admin\Productos\ListarProductos.aspx" />
@@ -284,12 +288,40 @@
     <Compile Include="pages\Admin\Categorias\ListarCategorias.aspx.designer.cs">
       <DependentUpon>ListarCategorias.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pages\Admin\Citas\AltaCita.aspx.cs">
+      <DependentUpon>AltaCita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Citas\AltaCita.aspx.designer.cs">
+      <DependentUpon>AltaCita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Citas\EditarCita.aspx.cs">
+      <DependentUpon>EditarCita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Citas\EditarCita.aspx.designer.cs">
+      <DependentUpon>EditarCita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Citas\ListarCitas.aspx.cs">
+      <DependentUpon>ListarCitas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Citas\ListarCitas.aspx.designer.cs">
+      <DependentUpon>ListarCitas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\Admin\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\Admin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Ordenes\ListarResumenOrdenes.aspx.cs">
+      <DependentUpon>ListarResumenOrdenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Ordenes\ListarResumenOrdenes.aspx.designer.cs">
+      <DependentUpon>ListarResumenOrdenes.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\Admin\Productos\AltaProducto.aspx.cs">
       <DependentUpon>AltaProducto.aspx</DependentUpon>

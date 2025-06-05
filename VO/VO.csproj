@@ -45,8 +45,10 @@
     <Compile Include="AdminsVO.cs" />
     <Compile Include="CategoriesVO.cs" />
     <Compile Include="CustomersVO.cs" />
+    <Compile Include="DatesTypesVO.cs" />
     <Compile Include="LocationVO.cs" />
     <Compile Include="OrderDetailsVO.cs" />
+    <Compile Include="OrdersSummaryVO.cs" />
     <Compile Include="OrdersVO.cs" />
     <Compile Include="ProductosVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

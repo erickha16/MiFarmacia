@@ -57,13 +57,13 @@
                       </a>
                   </li>
                  <li class="sidebar-item">
-                     <a href="#" class="sidebar-link">
+                     <a href="/pages/Admin/Citas/ListarCitas.aspx" class="sidebar-link">
                          <i class="fa-solid fa-calendar-days"></i>
                          <span>Citas Agendadas</span>
                      </a>
                  </li>
                  <li class="sidebar-item">
-                     <a href="#" class="sidebar-link">
+                     <a href="/pages/Admin/Ordenes/ListarResumenOrdenes.aspx" class="sidebar-link">
                         <i class="fa-solid fa-cash-register"></i>
                          <span>Detalles de las órdenes</span>
                      </a>

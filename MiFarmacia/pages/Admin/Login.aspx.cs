@@ -25,7 +25,7 @@ namespace Proyecto1_Farmacia_.pages.Admin
             if (user == "admin" && pswd == "admin")
             {
                 UtilControls.SweetBoxConfirm("Extito!", "Bienvenido!", "success",
-                    "/pages/Admin/IndexAdmin.aspx", this.Page, this.GetType());
+                    "/pages/Admin/Admins/infoAdmin.aspx", this.Page, this.GetType());
             }
             else //Si no, predir credenciales correctas
             {

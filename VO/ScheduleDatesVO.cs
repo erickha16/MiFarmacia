@@ -10,7 +10,7 @@ namespace VO
     public class ScheduleDatesVO
     {
         // Atributos + Propiedades
-        public int ScheduleDateID { get; set; }
+        public int Id { get; set; }
         public int DateTypeID { get; set; }
         public string DateTypeName { get; set; }
         public int FatherAge { get; set; }
@@ -26,7 +26,7 @@ namespace VO
 
         public ScheduleDatesVO(DataRow dr)
         {
-            ScheduleDateID = int.Parse(dr["ScheduleDateID"].ToString());
+            Id = int.Parse(dr["ScheduleDateID"].ToString());
             DateTypeID = int.Parse(dr["DateTypeID"].ToString());
             DateTypeName = dr["DateTypeName"].ToString();
             FatherAge = string.IsNullOrWhiteSpace(dr["FatherAge"].ToString()) ? 0 : int.Parse(dr["FatherAge"].ToString());
@@ -41,7 +41,7 @@ namespace VO
 
         public ScheduleDatesVO()
         {
-            ScheduleDateID = 0;
+            Id = 0;
             DateTypeID = 0;
             DateTypeName = string.Empty;
             FatherAge = 0;
