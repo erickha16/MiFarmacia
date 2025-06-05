@@ -7,9 +7,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace MiFarmacia.pages.Admin.Productos
+namespace MiFarmacia.pages.Admin.Sucursales
 {
-    public partial class ListarProductos : System.Web.UI.Page
+    public partial class ListarSucursales : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,16 +29,16 @@ namespace MiFarmacia.pages.Admin.Productos
         public void RefrescarGrid()
         {
             //Llenar el GV con los datos del BLL
-            GVProductos.DataSource = BllProductos.GetListProductos();
+            GVLocations.DataSource = BllLocations.GetListLocations();
 
             //Actualiza el contenido del grid
-            GVProductos.DataBind();
+            GVLocations.DataBind();
         }
 
-        protected void GVProductos_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        protected void GVLocations_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            string Id = GVProductos.DataKeys[e.RowIndex].Values["Id"].ToString();
-            string Resultado = BllProductos.DelProducto(int.Parse(Id));
+            string Id = GVLocations.DataKeys[e.RowIndex].Values["Id"].ToString();
+            string Resultado = BllLocations.DeleteLocation(int.Parse(Id));
             string mensaje = "";
             string sub = "";
             string clase = "";
@@ -46,12 +46,12 @@ namespace MiFarmacia.pages.Admin.Productos
             switch (Resultado)
             {
                 case "1":
-                    mensaje = "Producto eliminado con éxito";
+                    mensaje = "Sucursal eliminada con éxito";
                     sub = "";
                     clase = "success";
                     break;
                 default:
-                    mensaje = "Error al eliminar el producto";
+                    mensaje = "Error al eliminar la sucursal";
                     sub = "ERROR";
                     clase = "warning";
                     break;
@@ -60,15 +60,14 @@ namespace MiFarmacia.pages.Admin.Productos
             RefrescarGrid();
         }
 
-
-        protected void GVProductos_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void GVLocations_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             //este boton va a redireccionar a un nuevo aspx
             if (e.CommandName == "Select")
             {
                 int index = int.Parse(e.CommandArgument.ToString());
-                string IdProducto = GVProductos.DataKeys[index].Values["Id"].ToString();
-                Response.Redirect("EditarProducto.aspx?Id=" + IdProducto);
+                string IdProducto = GVLocations.DataKeys[index].Values["Id"].ToString();
+                Response.Redirect("EditarSucursal.aspx?Id=" + IdProducto);
             }
         }
     }

@@ -101,12 +101,6 @@ namespace MiFarmacia.pages.Admin.Productos
         {
             try
             {
-                //int id = int.Parse(this.lblIdChofer.Text);
-                //string telefono = this.txtTelefono.Text;
-                //DateTime fNacimiento = DateTime.Parse(this.txtFechaNacimiento.Text);
-                //string licencia = this.txtLicencia.Text;
-                //string urlFoto = this.urlFoto.Text;
-                //bool disponibilidad = chkDisponibilidad.Checked;
                 int id = int.Parse(this.lblId.Text);
                 string nombre = this.lblNombre.Text;
                 int categoryId = int.Parse(DDLCategories.SelectedValue);
@@ -117,7 +111,7 @@ namespace MiFarmacia.pages.Admin.Productos
                 BllProductos.UpdProducto(id, nombre, categoryId, price, stock, urlFoto);
                 //BllChoferes.UpdChofer(id, licencia, telefono, fNacimiento, null, null, null, urlFoto, disponibilidad);
 
-                UtilControls.SweetBoxConfirm("Extito!", "Producto agregado exitosamente", "success",
+                UtilControls.SweetBoxConfirm("Extito!", "Producto modificado exitosamente", "success",
                         "/pages/Admin/Productos/ListarProductos.aspx", this.Page, this.GetType());
 
             }

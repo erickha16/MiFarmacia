@@ -171,6 +171,9 @@
     <Content Include="pages\Admin\Productos\AltaProducto.aspx" />
     <Content Include="pages\Admin\Productos\EditarProducto.aspx" />
     <Content Include="pages\Admin\Productos\ListarProductos.aspx" />
+    <Content Include="pages\Admin\Sucursales\AltaSucursal.aspx" />
+    <Content Include="pages\Admin\Sucursales\EditarSucursal.aspx" />
+    <Content Include="pages\Admin\Sucursales\ListarSucursales.aspx" />
     <Content Include="pages\Cart.aspx" />
     <Content Include="pages\Citas.aspx" />
     <Content Include="pages\index.aspx" />
@@ -309,6 +312,27 @@
     <Compile Include="pages\Admin\Productos\ListarProductos.aspx.designer.cs">
       <DependentUpon>ListarProductos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="pages\Admin\Sucursales\AltaSucursal.aspx.cs">
+      <DependentUpon>AltaSucursal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Sucursales\AltaSucursal.aspx.designer.cs">
+      <DependentUpon>AltaSucursal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Sucursales\EditarSucursal.aspx.cs">
+      <DependentUpon>EditarSucursal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Sucursales\EditarSucursal.aspx.designer.cs">
+      <DependentUpon>EditarSucursal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Admin\Sucursales\ListarSucursales.aspx.cs">
+      <DependentUpon>ListarSucursales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Admin\Sucursales\ListarSucursales.aspx.designer.cs">
+      <DependentUpon>ListarSucursales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="pages\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -379,7 +403,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="assets\icons\" />
-    <Folder Include="pages\Admin\Sucursales\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

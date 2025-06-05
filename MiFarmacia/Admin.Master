@@ -51,7 +51,7 @@
                       </a>
                   </li>
                   <li class="sidebar-item">
-                      <a href="#" class="sidebar-link">
+                      <a href="/pages/Admin/Sucursales/ListarSucursales.aspx" class="sidebar-link">
                           <i class="fa-solid fa-location-dot"></i>
                           <span>Sucursales</span>
                       </a>

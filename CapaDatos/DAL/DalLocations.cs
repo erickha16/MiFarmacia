@@ -69,19 +69,26 @@ namespace CapaDatos.DAL
         }
 
         // Actualizar sucursal
-        public static void UpdateLocation(int locationId, string name)
+        public static void UpdateLocation(int locationId, string name, int addressId, string street, string colony, string number, string cp, string latLang)
         {
             try
             {
                 MetodoDatos.ExecuteNonQuery("Locations_Editar",
                     "@LocationID", locationId,
-                    "@Name", name);
+                    "@Name", name,
+                    "@AddressID", addressId,
+                    "@Street", street,
+                    "@Colony", colony,
+                    "@Number", number,
+                    "@CP", cp,
+                    "@LatLang", latLang);
             }
             catch
             {
                 throw;
             }
         }
+
 
         // Eliminar sucursal
         public static void DeleteLocation(int locationId)

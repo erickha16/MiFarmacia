@@ -45,6 +45,7 @@
     <Compile Include="DAL\DalAddresses.cs" />
     <Compile Include="DAL\DalAdmins.cs" />
     <Compile Include="DAL\DalCategores.cs" />
+    <Compile Include="DAL\DalLocations.cs" />
     <Compile Include="DAL\DalProducts.cs" />
     <Compile Include="MetodoDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
