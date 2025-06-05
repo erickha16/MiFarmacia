@@ -10,7 +10,7 @@ namespace VO
     public class OrderDetailsVO
     {
         // Atributos + Propiedades
-        public int OrderDetailID { get; set; }
+        public int Id { get; set; }
         public int OrderID { get; set; }
         public int ProductID { get; set; }
         public string ProductName { get; set; }
@@ -21,7 +21,7 @@ namespace VO
 
         public OrderDetailsVO()
         {
-            OrderDetailID = 0;
+            Id = 0;
             OrderID = 0;
             ProductID = 0;
             ProductName = string.Empty;
@@ -31,7 +31,7 @@ namespace VO
 
         public OrderDetailsVO(DataRow dr)
         {
-            OrderDetailID = int.Parse(dr["OrderDetailID"].ToString());
+            Id = int.Parse(dr["OrderDetailID"].ToString());
             OrderID = int.Parse(dr["OrderID"].ToString());
             ProductID = int.Parse(dr["ProductID"].ToString());
             Quantity = int.Parse(dr["Quantity"].ToString());
