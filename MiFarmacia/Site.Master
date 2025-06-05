@@ -68,7 +68,7 @@
                             <a class="nav-link active" id="index" href="/pages/index.aspx">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="sports" href="/pages/Sports_Health.aspx">Nutrición y deporte</a>
+                            <a class="nav-link" id="sports" href="/pages/Sports_Health.aspx">Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="parents" href="/pages/Parents.aspx">Mamás y Papás</a>
